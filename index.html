@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Background Generator</title>
+</head>
+<body>
+    <header>
+        <h1>CSS Background Generator</h1>
+        <p class="code">background: linear-gradient(to right, #e3e3e3, #ebebeb);</p>
+    </header>
+
+    <main>
+        <div class="color-inputs">
+            <input class="color1 shadow" type="color" value="#8AE3FF">
+            <input class="color2 shadow" type="color" value="#A852FF">
+        </div>
+        <div class="gradient">
+            <button class="to-right box shadow" value="to right"></button>
+            <button class="to-bottom box shadow" value="to bottom"></button>
+            <button class="to-bottom-right box shadow" value="to bottom right"></button>
+            <button class="to-top-right box shadow" value="to top right"></button>
+            <button class="closest-side box shadow" value="closest-side"></button>
+            <button class="farthest-side box shadow" value="farthest-side"></button>
+        </div>
+        <button class="random-btn shadow">Random Color</button>
+        <button class="copy-btn shadow">Copy to Clipboard</button>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
