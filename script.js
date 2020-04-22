@@ -4,16 +4,14 @@ const color2 = document.querySelector('.color-inputs .color2');
 const cssText = document.querySelector('header .code');
 
 // EVENT LISTENERS
-color1.addEventListener('change', changeBG);
-color2.addEventListener('change', changeBG);
+color1.addEventListener('input', changeBG);
+color2.addEventListener('input', changeBG);
 
 // FUNCTIONS
 function changeBG(event){
     // console.log(event.target.value);
     document.body.style = `background-image: linear-gradient(to right, ${color1.value}, ${color2.value});`;
     updateBgText();
-
-    
 }
 
 function updateBgText(){
