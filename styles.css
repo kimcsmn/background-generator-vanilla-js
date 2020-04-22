@@ -46,7 +46,7 @@ header {
 }
 
 main {
-    width: 600px;
+    width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@ main {
     justify-content: space-evenly;
 }
 .color-inputs input {
-    width: 150px;
+    width: 100px;
     height: 50px;
     border: none;
     box-shadow: 0px 5px 10px -5px #3a3a3a;
@@ -69,9 +69,21 @@ main {
 .gradient {
     display: flex;
     justify-content: space-around;
-    padding: 3em 0;
+    padding: 2em 0;
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
+}
+
+.gradient .linear {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gradient .radial {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .gradient .box{
@@ -110,4 +122,28 @@ button {
 }
 
 
+/* GRADIENT  */
+.gradient .to-right {
+    background: linear-gradient(to right, var(--color1), var(--color2));
+}
 
+.gradient .to-bottom {
+    background: linear-gradient(to bottom, var(--color1), var(--color2));
+
+}
+
+.gradient .to-bottom-right {
+    background: linear-gradient(to bottom right, var(--color1), var(--color2));
+}
+
+.gradient .to-top-right {
+    background: linear-gradient(to top right, var(--color1), var(--color2));
+}
+
+.gradient .closest-side {
+    background: radial-gradient(closest-corner, var(--color1), var(--color2));
+}
+
+.gradient .farthest-side {
+    background: radial-gradient(farthest-side, var(--color1), var(--color2));
+}

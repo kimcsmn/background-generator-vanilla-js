@@ -12,9 +12,12 @@ function changeBG(event){
     // console.log(event.target.value);
     document.body.style = `background-image: linear-gradient(to right, ${color1.value}, ${color2.value});`;
     updateBgText();
+
+    
 }
 
 function updateBgText(){
     const bg = document.body.style.backgroundImage;
     cssText.innerText = 'background-image: ' + bg;
 }
+
