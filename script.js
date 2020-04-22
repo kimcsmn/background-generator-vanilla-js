@@ -12,19 +12,19 @@ gradient.addEventListener('click', setGradient);
 
 // FUNCTIONS
 function changeBG(){
-    document.body.style = `background-image: linear-gradient(to right, ${color1.value}, ${color2.value});`;
+    body.style = `background-image: linear-gradient(to right, ${color1.value}, ${color2.value});`;
     updateBgText();
 
 }
 
 function updateBgText(){
     const bg = document.body.style.backgroundImage;
-    cssText.innerText = 'background-image: ' + bg +'';
+    cssText.innerText = 'background-image: ' + bg +';';
 }
 
 function setGradient(e){
     const gShape = e.target.parentElement.className;
     const gDirection = e.target.value;
-    body.style= `backgroun-image: ${gShape}-gradient(${gDirection}, ${color1.value}, ${color2.value});`;
+    body.style= `background-image: ${gShape}-gradient(${gDirection}, ${color1.value}, ${color2.value});`;
     updateBgText();
 };
