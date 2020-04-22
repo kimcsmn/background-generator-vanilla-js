@@ -141,10 +141,10 @@ button {
     background: linear-gradient(to top right, var(--color1), var(--color2));
 }
 
-.gradient .closest-side {
-    background: radial-gradient(closest-corner, var(--color1), var(--color2));
+.gradient .farthest-corner {
+    background: radial-gradient(farthest-corner, var(--color1), var(--color2));
 }
 
-.gradient .farthest-side {
-    background: radial-gradient(farthest-side, var(--color1), var(--color2));
+.gradient .closest-side {
+    background: radial-gradient(closest-side, var(--color1), var(--color2));
 }
