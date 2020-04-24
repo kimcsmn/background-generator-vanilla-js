@@ -4,6 +4,7 @@ let color2 = document.querySelector('.color-inputs .color2');
 const cssText = document.querySelector('header .code');
 const gradient = document.querySelector('.gradient');
 const randBtn = document.querySelector('.random-btn');
+const copyBtn = document.querySelector('.copy-btn');
 const body = document.body;
 let gShape = 'linear'; 
 let gDirection = 'to right';
@@ -13,6 +14,7 @@ color1.addEventListener('input', changeColorInputs);
 color2.addEventListener('input', changeColorInputs);
 gradient.addEventListener('click', setGradient);
 randBtn.addEventListener('click', randomColor);
+copyBtn.addEventListener('click', copyCSS);
 
 // FUNCTIONS
 function changeColorInputs(){
@@ -43,3 +45,13 @@ function randomColor(){
     updateBgText(); 
 };
 
+function copyCSS(){
+    const holdText = cssText.innerText;
+    const elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = holdText;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+    console.log(elem)
+}
