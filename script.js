@@ -5,6 +5,8 @@ const cssText = document.querySelector('header .code');
 const gradient = document.querySelector('.gradient');
 const randBtn = document.querySelector('.random-btn');
 const body = document.body;
+let gShape = 'linear'; 
+let gDirection = 'to right';
 
 // EVENT LISTENERS
 color1.addEventListener('input', changeColorInputs);
@@ -25,8 +27,9 @@ function updateBgText(){
 }
 
 function setGradient(e){
-    const gShape = e.target.parentElement.className;
-    const gDirection = e.target.value;
+    gShape = e.target.parentElement.className;
+    gDirection = e.target.value;
+    console.log(gShape, gDirection);
     body.style= `background-image: ${gShape}-gradient(${gDirection}, ${color1.value}, ${color2.value});`;
     updateBgText();
 };
@@ -35,7 +38,7 @@ function setGradient(e){
 function randomColor(){
     const color1 = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
     const color2 = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-    body.style = `background-image: linear-gradient(to right, ${color1}, ${color2});`;
+    body.style = `background-image: ${gShape}-gradient(${gDirection}, ${color1}, ${color2});`;
     updateBgText(); 
 };
 
