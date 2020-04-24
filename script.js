@@ -54,4 +54,12 @@ function copyCSS(){
     document.execCommand("copy");
     document.body.removeChild(elem);
     console.log(elem)
+
+    // copy button animation
+    copyBtn.classList.add('button-slide');
+    copyBtn.classList.add('button-slide-down');
+    copyBtn.addEventListener('transitionend', function(){
+        copyBtn.classList.remove('button-slide');
+        copyBtn.classList.remove('button-slide-down');
+    });
 }

@@ -148,3 +148,24 @@ button {
 .gradient .closest-side {
     background: radial-gradient(closest-side, var(--color1), var(--color2));
 }
+
+button {
+    cursor: pointer;
+}
+
+
+
+.button-slide {
+    color: #3a3a3a;
+    /* border: 2px solid rgb(216, 2, 134); */
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #8AE3FF;
+    transition: ease-out 0.4s;
+  }
+
+.button-slide-down:hover {
+    box-shadow: inset 0 100px 0 0 #8AE3FF;
+    color: #3a3a3a;
+  }
+
