@@ -1,6 +1,6 @@
 // GETTING ELEMENTS FROM DOM
-const color1 = document.querySelector('.color-inputs .color1');
-const color2 = document.querySelector('.color-inputs .color2');
+let color1 = document.querySelector('.color-inputs .color1');
+let color2 = document.querySelector('.color-inputs .color2');
 const cssText = document.querySelector('header .code');
 const gradient = document.querySelector('.gradient');
 const randBtn = document.querySelector('.random-btn');
@@ -29,16 +29,17 @@ function updateBgText(){
 function setGradient(e){
     gShape = e.target.parentElement.className;
     gDirection = e.target.value;
-    console.log(gShape, gDirection);
+    console.log(gShape, gDirection, color1.value, color2.value);
     body.style= `background-image: ${gShape}-gradient(${gDirection}, ${color1.value}, ${color2.value});`;
     updateBgText();
 };
 
 
 function randomColor(){
-    const color1 = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-    const color2 = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-    body.style = `background-image: ${gShape}-gradient(${gDirection}, ${color1}, ${color2});`;
+    color1.value = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    color2.value = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    console.log(color1, color2);
+    body.style = `background-image: ${gShape}-gradient(${gDirection}, ${color1.value}, ${color2.value});`;
     updateBgText(); 
 };
 
