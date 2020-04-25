@@ -14,7 +14,7 @@
 body {
     max-width: 100vw;
     min-height: 100vh;
-    background: linear-gradient(to right, var(--color1), var(--color2));
+    background: linear-gradient(rgb(138, 227, 255), rgb(168, 82, 255));
     text-align: center;
     font-family: 'PT Sans', serif;
 }
