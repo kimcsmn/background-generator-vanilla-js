@@ -7,7 +7,7 @@ const randBtn = document.querySelector('.random-btn');
 const copyBtn = document.querySelector('.copy-btn');
 const body = document.body;
 let gShape = 'linear'; 
-let gDirection = 'to right';
+let gDirection = 'to bottom';
 
 // EVENT LISTENERS
 color1.addEventListener('input', changeColorInputs);
@@ -18,7 +18,7 @@ copyBtn.addEventListener('click', copyCSS);
 
 // FUNCTIONS
 function changeColorInputs(){
-    body.style = `background-image: linear-gradient(to right, ${color1.value}, ${color2.value});`;
+    body.style = `background-image: ${gShape}-gradient(${gDirection}, ${color1.value}, ${color2.value});`;
     updateBgText();
 
 }
