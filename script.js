@@ -31,7 +31,6 @@ function updateBgText(){
 function setGradient(e){
     gShape = e.target.parentElement.className;
     gDirection = e.target.value;
-    console.log(gShape, gDirection, color1.value, color2.value);
     body.style= `background-image: ${gShape}-gradient(${gDirection}, ${color1.value}, ${color2.value});`;
     updateBgText();
 };
@@ -40,12 +39,12 @@ function setGradient(e){
 function randomColor(){
     color1.value = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
     color2.value = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-    console.log(color1, color2);
     body.style = `background-image: ${gShape}-gradient(${gDirection}, ${color1.value}, ${color2.value});`;
     updateBgText(); 
 };
 
 function copyCSS(){
+    event.preventDefault();
     const holdText = cssText.innerText;
     const elem = document.createElement("textarea");
     document.body.appendChild(elem);
@@ -53,13 +52,16 @@ function copyCSS(){
     elem.select();
     document.execCommand("copy");
     document.body.removeChild(elem);
-    console.log(elem)
 
     // copy button animation
-    copyBtn.classList.add('button-slide');
-    copyBtn.classList.add('button-slide-down');
+    console.log(copyBtn.innerHTML);
+    copyBtn.classList.add('tooltip');
+    
+    // copyBtn.classList.add('button-slide-down');
     copyBtn.addEventListener('transitionend', function(){
-        copyBtn.classList.remove('button-slide');
-        copyBtn.classList.remove('button-slide-down');
+        copyBtn.classList.remove('tooltip');
+     
+
+        // copyBtn.classList.remove('button-slide-down');
     });
 }
