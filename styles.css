@@ -47,11 +47,15 @@ header {
 }
 
 main {
-    width: 500px;
+    width: 300px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 2em 1em;
+    padding: 1em;
+}
+
+.gradient {
+    flex-direction: column;
 }
 
 
@@ -69,25 +73,23 @@ main {
 
 .gradient {
     display: flex;
-    justify-content: space-around;
-    padding: 2em 0;
+    padding: 1.5em 0;
     margin: 0 auto;
     width: 100%;
 }
 
 .gradient .linear {
-    width: 100%;
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 1em;
 }
 
 .gradient .radial {
-    width: 50%;
     display: flex;
     justify-content: space-evenly;
 }
 
-.gradient .box{
+.gradient button{
     width: 50px;
     height: 50px;
     box-shadow: 0px 3px 10px -5px ;
@@ -95,8 +97,9 @@ main {
     background: linear-gradient(to right,  #8AE3FF, #A852FF);
 }
 
-.gradient .box:hover {
+.gradient button:hover {
     transform: scale(110%);
+    transition: all .1s ease;
 }
 
 .random-btn, .copy-btn {
@@ -123,35 +126,43 @@ main {
 
 
 /* GRADIENT  */
-.gradient .to-right {
+.linear button:nth-child(1){
     background: linear-gradient(to right, var(--color1), var(--color2));
 }
 
-.gradient .to-bottom {
+.linear button:nth-child(2) {
     background: linear-gradient(to bottom, var(--color1), var(--color2));
 
 }
 
-.gradient .to-bottom-right {
+.linear button:nth-child(3) {
     background: linear-gradient(to bottom right, var(--color1), var(--color2));
 }
 
-.gradient .to-top-right {
+.linear button:nth-child(4) {
     background: linear-gradient(to top right, var(--color1), var(--color2));
 }
 
-.gradient .farthest-corner {
+.radial button:nth-child(1) {
+    background: radial-gradient(circle farthest-corner, var(--color1), var(--color2));
+}
+
+.radial button:nth-child(2) {
+    background: radial-gradient(circle closest-side, var(--color1), var(--color2));
+}
+
+.radial button:nth-child(3){
     background: radial-gradient(farthest-corner, var(--color1), var(--color2));
 }
 
-.gradient .closest-side {
+.radial button:nth-child(4) {
     background: radial-gradient(closest-side, var(--color1), var(--color2));
 }
 
 button {
     cursor: pointer;
     position: relative;
-    transition: all .3s ease;
+    transition: all .2s ease;
 }
 
 
